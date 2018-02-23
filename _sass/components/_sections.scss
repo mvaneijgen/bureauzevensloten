@@ -1,0 +1,41 @@
+.alloy-klanten {
+  margin-bottom: $base-spacing*2;
+  filter: grayscale(1);
+
+  transition: filter;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+
+
+  &:hover {
+    filter: grayscale(0);
+  }
+  img {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    display: block;
+  }
+  @include media-breakpoint-up(md) {
+
+  }
+
+}
+#samenwerken {
+  h2 {
+    @include responsive-font(2.8vw, 18px, 42px, 26px);
+
+    span {
+      display: block;
+    }
+
+  }
+}
+
+#contact {
+  a {
+    padding: 0 $base-spacing;
+    font-weight: 700;
+  }
+}

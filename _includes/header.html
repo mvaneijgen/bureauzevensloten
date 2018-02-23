@@ -1,0 +1,23 @@
+<header class="site-header site-header--alt alloy-background--light" role="banner">
+  {% include nav.html %}
+</header>
+
+<div id="home" class="container--full alloy-background--one alloy-background--clip section-header">
+
+  <header class="site-header alloy-background--one" role="banner">
+    {% include nav.html %}
+  </header>
+  <div class="inner centered">
+    <h1 class="alloy-reveal alloyFadeUp">{{ site.description }}</h1>
+    <div class="alloy-logo">
+      <h5>{{ site.title }}</h5>
+      <span>{{ site.tagline }}</span>
+    </div>
+
+  </div>
+  <div class="alloy-scroll-down">
+    <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#introductie" class="no-style {% if page.url == "/" %}alloy-anchor{% endif %}">
+      <img src="{{ "/assets/images/" | relative_url }}arrow.svg" alt="">
+    </a>
+  </div>
+</div>

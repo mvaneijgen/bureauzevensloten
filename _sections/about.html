@@ -1,0 +1,21 @@
+---
+title: Over mij
+layout: page
+order: 60
+---
+<div class="container--full alloy-background--one">
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h3>{{ site.author }}</h3>
+      <p><a class="no-link" href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
+      <p><a class="no-link" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+      <img class="profile" src="{{ "/assets/images/" | relative_url }}{{ site.author | slugify }}.jpg" alt="{{ site.author }}">
+    </div>
+  </div>
+</div>
+</div>

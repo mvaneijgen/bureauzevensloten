@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+
+}
+section {
+  position: relative;
+}
+
+.container {
+  padding-top: $base-spacing*2;
+
+  > .row {
+    padding-bottom: $base-spacing*2;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .container {
+    padding-top: $base-spacing*6;
+
+    > .row {
+      padding-bottom: $base-spacing*6;
+    }
+  }
+}
+.padding--tiny {
+  padding-top: $base-spacing/3;
+
+  > .row {
+    padding-bottom: $base-spacing/3;
+  }
+}
+.padding--small {
+  padding-top: $base-spacing;
+
+  > .row {
+    padding-bottom: $base-spacing;
+  }
+}
+.padding--none {
+  padding-top: 0;
+
+  > .row {
+    padding-bottom: 0;
+  }
+}
+.container--full {
+  position: relative;
+}
+//------------------------------------------------------//
+// Backgrounds
+//------------------------------------------------------//
+.alloy-background--one {
+  background-color: $brand-primary;
+
+  h1, h2, h3, h4, h5, h6, p, span, a {
+    color: $brand-light;
+  }
+  a {
+    &:after {
+      background-color: $brand-light;
+    }
+    &:hover {
+      &:after {
+        background-color: darken($brand-primary, 5%);
+      }
+    }
+  }
+}
+.alloy-background--one-lighter {
+  background-color: lighten($brand-primary, 10%);
+}
+.alloy-background--one-light {
+  background-color: lighten($brand-primary, 20%);
+}
+.alloy-background--light {
+  background-color: $brand-light;
+}
+.alloy-background--grey {
+  background-color: $brand-grey;
+
+  // h1, h2, h3, h4, h5, h6, p, span, a {
+  //   color: $brand-primary;
+  // }
+}
+.alloy-background--clip {
+  -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+}
+.background--scroll-effect {
+  overflow: hidden;
+  .inner {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+//------------------------------------------------------//
+// END Backgrounds
+//------------------------------------------------------//
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+  iframe {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  }
+}
+
+.profile {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border: 10px solid $brand-light;
+}

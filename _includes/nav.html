@@ -1,0 +1,19 @@
+<div class="container padding--tiny">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="alloy-navbar">
+        <a class="site-title animated fadeInLeft seventh" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <nav class="animated fadeInLeft eighth alloy-pull-right">
+        <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#home" class="alloy-menu-item {% if page.url == "/" %}alloy-anchor{% endif %}">Home</a>
+        {% assign items = site.sections | sort: 'order' %}
+        {% for item in items %}
+        <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#{{ item.title | slugify }}" class="alloy-menu-item {% if page.url == "/" %}alloy-anchor{% endif %}">{{ item.title }}</a>
+        {% endfor %}
+
+      </nav>
+    </div>
+  </div>
+</div>

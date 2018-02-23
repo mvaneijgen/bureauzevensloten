@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: $brand-dark;
+  font-size: 18px;
+  line-height: 1.6em;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+}
+@include media-breakpoint-up(md) {
+  body {
+    font-size: 22px;
+  }
+}
+h1, h2, h3, h4, h5, h6, header {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+h1 {
+  font-size: 1.8rem;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+@include media-breakpoint-up(md) {
+  h1 {
+    font-size: 2.6em;
+  }
+}
+h2 {
+  line-height: 1.4em;
+}
+h3 {
+  span {
+    text-transform: uppercase;
+    font-size: .9em;
+    opacity: $base-opacity*2;
+  }
+}
+h4 {
+  font-family: 'Open Sans', sans-serif;
+}
+.alloy-logo {
+  margin-bottom: 0;
+
+  h5 {
+    margin-bottom: 0;
+    line-height: 1em;
+  }
+  span {
+    font-size: .8em;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+  }
+}
+
+.alloy-large-counter {
+  position: relative;
+  // text-align: center;
+  // vertical-align: middle;
+  // position: absolute;
+  // left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
+
+  span {
+    @extend h1;
+    color: lighten($brand-grey, 10);
+    // opacity: $base-opacity*2;
+    // display: inline-block;
+    z-index: 100;
+    position: relative;
+  }
+  .counter {
+    // color: lighten($brand-primary, 40);
+    // color: $brand-primary;
+    // opacity: $base-opacity;
+    color: lighten($brand-grey, 0);
+    font-size: 5em;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    z-index: 50;
+  }
+}
+.centered {
+  text-align: center;
+}
+.alloy-pull-right {
+  text-align: right;
+}
+
+$alloyAnchorEffect: 3px;
+
+a {
+  text-decoration: none;
+  color: $brand-dark;
+  display: inline-block;
+
+  // Animation
+  transition: transform, text-shadow;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  position: relative;
+
+  &:active,
+  &:hover {
+    transform: translate($alloyAnchorEffect, -$alloyAnchorEffect);
+    text-shadow: -$alloyAnchorEffect $alloyAnchorEffect 0 rgba($brand-dark, .2);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $brand-dark;
+    display: block;
+    transition: transform;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+
+  }
+  &.no-link {
+    &:after {
+      background-color: rgba($brand-light, 0) !important;
+    }
+    &:hover {
+      &:after {
+        background-color: darken($brand-primary, 5%) !important;
+      }
+    }
+  }
+  &:hover {
+    &:after {
+      transform: translate(-$alloyAnchorEffect, $alloyAnchorEffect);
+      background-color: darken($brand-primary, 5%);
+    }
+  }
+  &.no-style {
+    &:hover {
+      transform: none;
+
+    }
+    &:after {
+      opacity: 0;
+    }
+  }
+}

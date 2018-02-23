@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1680 3000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <rect x="0" y="0" width="1680" height="3000" style="fill:#fff;"/>
+    <path class="large" d="M1488.33,1373.84l-572.434,286.217l572.434,286.217l572.433,-286.217l-572.433,-286.217Z" style="fill:#eee;"/>
+    <path class="Large" d="M1660.06,2203.87l-457.947,228.973l457.947,228.973l457.947,-228.973l-457.947,-228.973Z" style="fill:#7b4;"/>
+    <path class="Large" serif:id="Large" d="M0,114.487l-457.947,228.973l457.947,228.973l457.947,-228.973l-457.947,-228.973Z" style="fill:#eee;"/>
+    <path class="Large" serif:id="Large" d="M1688.68,357.771l-457.947,228.973l457.947,228.974l457.946,-228.974l-457.946,-228.973Z" style="fill:#add68f;"/>
+    <path class="Large" serif:id="Large" d="M114.487,1717.3l-457.947,228.974l457.947,228.973l457.946,-228.973l-457.946,-228.974Z" style="fill:#7b4;"/>
+    <path class="medium" d="M343.46,2232.49l-228.973,114.487l228.973,114.487l228.973,-114.487l-228.973,-114.487Z" style="fill:#add68f;"/>
+    <path class="medium" serif:id="medium" d="M0,2690.44l-228.973,114.487l228.973,114.486l228.973,-114.486l-228.973,-114.487Z" style="fill:#eee;"/>
+    <path class="medium" serif:id="medium" d="M1545.57,2089.38l-228.973,114.487l228.973,114.486l228.974,-114.486l-228.974,-114.487Z" style="fill:#add68f;"/>
+    <path class="medium" serif:id="medium" d="M1431.08,1345.22l-228.974,114.487l228.974,114.487l228.973,-114.487l-228.973,-114.487Z" style="fill:#7b4;"/>
+    <path class="medium" serif:id="medium" d="M57.243,944.515l-228.973,114.487l228.973,114.486l228.974,-114.486l-228.974,-114.487Z" style="fill:#eee;"/>
+    <path class="medium" serif:id="medium" d="M114.487,457.947l-228.974,114.486l228.974,114.487l228.973,-114.487l-228.973,-114.486Z" style="fill:#add68f;"/>
+    <path class="small" d="M286.217,1516.95l-114.487,57.243l114.487,57.243l114.486,-57.243l-114.486,-57.243Z" style="fill:#add68f;"/>
+    <path class="small" serif:id="small" d="M0,2575.95l-114.487,57.244l114.487,57.243l114.487,-57.243l-114.487,-57.244Z" style="fill:#7b4;"/>
+    <path class="small" serif:id="small" d="M1488.33,1087.62l-114.487,57.244l114.487,57.243l114.487,-57.243l-114.487,-57.244Z" style="fill:#eee;"/>
+    <path class="small" serif:id="small" d="M1488.33,400.703l-114.487,57.244l114.487,57.243l114.487,-57.243l-114.487,-57.244Z" style="fill:#7b4;"/>
+    <path class="tiny" d="M286.217,314.838l-57.244,28.622l57.244,28.622l57.243,-28.622l-57.243,-28.622Z" style="fill:#7b4;"/>
+    <path class="tiny" serif:id="tiny" d="M1431.08,1001.76l-57.244,28.622l57.244,28.622l57.243,-28.622l-57.243,-28.622Z" style="fill:#7b4;"/>
+    <path class="tiny" serif:id="tiny" d="M114.487,1030.38l-57.244,28.622l57.244,28.621l57.243,-28.621l-57.243,-28.622Z" style="fill:#7b4;"/>
+    <path class="tiny" serif:id="tiny" d="M1488.33,228.973l-57.243,28.622l57.243,28.622l57.243,-28.622l-57.243,-28.622Z" style="fill:#eee;"/>
+    <path class="tiny" serif:id="tiny" d="M572.433,2118l-57.243,28.621l57.243,28.622l57.244,-28.622l-57.244,-28.621Z" style="fill:#eee;"/>
+</svg>
