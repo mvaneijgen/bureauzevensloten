@@ -11,6 +11,7 @@ $base-line-height: 1.5 !default;
 $base-spacing:     15px !default;
 
 $brand-primary: #7B4;
+$brand-primary-lighten: lighten($brand-primary, 20%);
 $brand-secondary: #e64;
 $brand-light: #fff;
 $brand-dark: #000;
