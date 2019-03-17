@@ -3,22 +3,24 @@
 // Define defaults for each variable.
 
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$base-font-size:   18px !default;
+$base-font-size: 18px !default;
 $base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
+$small-font-size: $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
-$base-spacing:     15px !default;
+$base-spacing: 15px !default;
 
-$brand-primary: #7B4;
-$brand-primary-lighten: lighten($brand-primary, 20%);
+$brand-one: #7b4;
+$brand-one-lighten: lighten($brand-one, 20%);
 $brand-secondary: #e64;
 $brand-light: #fff;
 $brand-dark: #000;
 $brand-grey: #eee;
 
+$base-opacity: 0.2;
 
-$base-opacity: .2;
+$font-base: "Open Sans", sans-serif;
+$font-header: "Merriweather", serif;
 
 /// Viewport sized typography with minimum and maximum values
 ///
@@ -37,7 +39,7 @@ $base-opacity: .2;
 ///
 @mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
   $responsive-unitless: $responsive / ($responsive - $responsive + 1);
-  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $dimension: if(unit($responsive) == "vh", "height", "width");
   $min-breakpoint: $min / $responsive-unitless * 100;
 
   @media (max-#{$dimension}: #{$min-breakpoint}) {
@@ -59,13 +61,12 @@ $base-opacity: .2;
   font-size: $responsive;
 }
 
-
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
 ) !default;
 // Breakpoint viewport sizes and media queries.
 //
@@ -83,9 +84,17 @@ $grid-breakpoints: (
 //    md
 //    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
 //    md
-@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+@function breakpoint-next(
+  $name,
+  $breakpoints: $grid-breakpoints,
+  $breakpoint-names: map-keys($breakpoints)
+) {
   $n: index($breakpoint-names, $name);
-  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+  @return if(
+    $n < length($breakpoint-names),
+    nth($breakpoint-names, $n + 1),
+    null
+  );
 }
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
@@ -146,7 +155,11 @@ $grid-breakpoints: (
 
 // Media that spans multiple breakpoint widths.
 // Makes the @content apply between the min and max breakpoints
-@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+@mixin media-breakpoint-between(
+  $lower,
+  $upper,
+  $breakpoints: $grid-breakpoints
+) {
   $min: breakpoint-min($lower, $breakpoints);
   $max: breakpoint-max($upper, $breakpoints);
 
@@ -187,17 +200,8 @@ $grid-breakpoints: (
   }
 }
 
-
 // Import partials.
-@import
-  "components/bootstrap-grid",
-  "components/type",
-  "components/animate",
-  "components/base",
-  "components/form",
-  "components/header",
-  "components/layout",
-  "components/sections",
-  "components/footer",
-  "components/syntax-highlighting"
-;
+@import "components/bootstrap-grid", "components/type", "components/animate",
+  "components/base", "components/form", "components/header", "components/layout",
+  "components/sections", "components/footer", "components/syntax-highlighting",
+  "components/cv";

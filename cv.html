@@ -1,0 +1,69 @@
+---
+Title: Curriculum vitae
+layout: cv
+---
+
+<section id="author">
+  <img src="assets/img/{{ site.title | slugify }}.jpg" alt="{{ site.title }}" />
+</section>
+<section id="info" class="list">
+  <h1><span>Sophie</span> <span>van Os</span></h1>
+  <h2>{{ site.description }}</h2>
+  <p>
+    {{ site.age }}, {{ site.location }} {{ site.divider }}
+    <a href="tel:{{ site.phone | replace: ' ', '' }}">{{ site.phone }}</a>
+    <br />
+    <a href="mailto:{{ site.email }}">{{ site.email }}, bureauzevensloten.nl</a>
+  </p>
+</section>
+<section id="interactive">
+  <a href="mailto:{{ site.email }}" class="btn btn--base">
+    <svg>
+      <rect
+        x="11"
+        y="12"
+        rx="23"
+        ry="35"
+        fill="none"
+        width="226"
+        height="46"
+      ></rect>
+    </svg>
+    E-mail mij</a
+  >
+  <a href="javascript:window.print()" class="btn btn--sub">
+    <svg>
+      <rect
+        x="11"
+        y="12"
+        rx="23"
+        ry="35"
+        fill="none"
+        width="226"
+        height="46"
+      ></rect>
+    </svg>
+    Print mijn CV</a
+  >
+</section>
+<section id="intern" class="list">
+  <h2>Stages</h2>
+  <div class="items">
+    {% assign items = site.intern | sort: 'start' %} {% for item in items
+    reversed %} {% include cv-item-structure.html%} {% endfor %}
+  </div>
+</section>
+<section id="work" class="list">
+  <h2>Ervaring</h2>
+  <div class="items">
+    {% assign items = site.work | sort: 'start' %} {% for item in items reversed
+    %} {% include cv-item-structure.html%} {% endfor %}
+  </div>
+</section>
+<section id="school" class="list">
+  <h2>Onderwijs</h2>
+  <div class="items">
+    {% assign items = site.school | sort: 'start' %} {% for item in items
+    reversed %} {% include cv-item-structure.html%} {% endfor %}
+  </div>
+</section>

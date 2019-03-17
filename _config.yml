@@ -24,9 +24,9 @@ phone: 06 12 99 51 30
 baseurl: "/bureauzevensloten" # the subpath of your site, e.g. /blog
 url: "https://mvaneijgen.nl" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sophiejpvanos
-instagram_username:  sophiejpvanos
-facebook_username:  sophiejpvanos
-linkedin_username:  sophiejpvanos
+instagram_username: sophiejpvanos
+facebook_username: sophiejpvanos
+linkedin_username: sophiejpvanos
 
 lang: nl
 
@@ -41,6 +41,12 @@ collections:
   klanten:
     output: false
   projecten:
+    output: false
+  intern:
+    output: false
+  school:
+    output: false
+  work:
     output: false
     # permalink: /:name
 

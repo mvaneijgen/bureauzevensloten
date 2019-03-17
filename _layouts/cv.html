@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body id="layout-cv">
+    <div class="page-content">
+      <div class="wrapper">
+        {% include cv-header.html %}
+        {{ content }}
+      </div>
+    </div>
+
+    {% include cv-footer.html %}
+  </body>
+</html>
