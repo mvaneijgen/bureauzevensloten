@@ -47,12 +47,6 @@ collections:
     output: false
   projecten:
     output: false
-  intern:
-    output: false
-  school:
-    output: false
-  work:
-    output: false
     # permalink: /:name
 
 excerpt_separator: ""
