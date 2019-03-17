@@ -4,17 +4,32 @@ layout: cv
 ---
 
 <section id="author">
-  <img src="assets/img/{{ site.title | slugify }}.jpg" alt="{{ site.title }}" />
+  <img
+    src="assets/images/{{ site.author | slugify }}.jpg"
+    alt="{{ site.title }}"
+  />
 </section>
 <section id="info" class="list">
   <h1><span>Sophie</span> <span>van Os</span></h1>
-  <h2>{{ site.description }}</h2>
-  <p>
-    {{ site.age }}, {{ site.location }} {{ site.divider }}
-    <a href="tel:{{ site.phone | replace: ' ', '' }}">{{ site.phone }}</a>
+  <br />
+  <!-- <h2>{{ site.description }}</h2> -->
+  <div class="items">
+    <div class="item">
+      Sophie Jeanne Pauline van Os
+      <br />
+      {{ site.age }}
+      <br />
+      {{ site.location }}
+    </div>
     <br />
-    <a href="mailto:{{ site.email }}">{{ site.email }}, bureauzevensloten.nl</a>
-  </p>
+    <div class="item">
+      <a href="tel:{{ site.phone | replace: ' ', '' }}">{{ site.phone }}</a>
+      <br />
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <!-- <br /> -->
+      <!-- <a href="{{ site.url }}">{{ site.url }}</a> -->
+    </div>
+  </div>
 </section>
 <section id="interactive">
   <a href="mailto:{{ site.email }}" class="btn btn--base">
@@ -47,23 +62,32 @@ layout: cv
   >
 </section>
 <section id="intern" class="list">
-  <h2>Stages</h2>
+  <h2>Werkervaring</h2>
   <div class="items">
-    {% assign items = site.intern | sort: 'start' %} {% for item in items
-    reversed %} {% include cv-item-structure.html%} {% endfor %}
+    {% assign items = site.data.werkervaring | sort: 'start' %} {% for item in
+    items reversed %} {% include cv-item-structure.html%} {% endfor %}
   </div>
 </section>
 <section id="work" class="list">
-  <h2>Ervaring</h2>
+  <h2>Projecten</h2>
   <div class="items">
-    {% assign items = site.work | sort: 'start' %} {% for item in items reversed
-    %} {% include cv-item-structure.html%} {% endfor %}
+    {% assign items = site.data.projecten | sort: 'start' %} {% for item in
+    items reversed %} {% include cv-item-structure.html%} {% endfor %}
   </div>
 </section>
-<section id="school" class="list">
-  <h2>Onderwijs</h2>
+
+<section id="opleidingen" class="list">
+  <h2>Opleidingen</h2>
   <div class="items">
-    {% assign items = site.school | sort: 'start' %} {% for item in items
-    reversed %} {% include cv-item-structure.html%} {% endfor %}
+    {% assign items = site.data.opleidingen | sort: 'start' %} {% for item in
+    items reversed %} {% include cv-item-structure.html%} {% endfor %}
+  </div>
+</section>
+
+<section id="cursussen" class="list">
+  <h2>Cursussen</h2>
+  <div class="items">
+    {% assign items = site.data.cursussen | sort: 'start' %} {% for item in
+    items reversed %} {% include cv-item-structure.html%} {% endfor %}
   </div>
 </section>

@@ -1,6 +1,12 @@
 <div class="item">
-  <h3>{{ item.institute }} <span>{{ site.divider }} {{ item.location }}</span></h3>
+  <h3>
+    {{ item.institute }} <span>{{ site.divider }} {{ item.location }}</span>
+  </h3>
   <p>{{ item.title }}</p>
-  <p>{{ item.start }} {{ site.divider }} {% if item.end == site.current %}<span>{{ item.end }}</span>{% else %}{{ item.end }}{% endif %}</p>
+  <p class="year">
+    {{ item.start }} {% if item.end %}{{ site.divider }}{% endif %} {% if
+    item.end == site.current %}<span>{{ item.end }}</span
+    >{% else %}{{ item.end }}{% endif %}
+  </p>
   <p>{{ item.company }}</p>
 </div>
