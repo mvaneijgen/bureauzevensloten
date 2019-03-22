@@ -64,30 +64,30 @@ layout: cv
 <section id="intern" class="list">
   <h2>Werkervaring</h2>
   <div class="items">
-    {% assign items = site.data.werkervaring | sort: 'start' %} {% for item in
-    items reversed %} {% include cv-item-structure.html%} {% endfor %}
+    {% assign items = site.data.werkervaring %} {% for item in items reversed %}
+    {% include cv-item-structure.html%} {% endfor %}
   </div>
 </section>
 <section id="work" class="list">
   <h2>Projecten</h2>
   <div class="items">
-    {% assign items = site.data.projecten | sort: 'start' %} {% for item in
-    items reversed %} {% include cv-item-structure.html%} {% endfor %}
+    {% assign items = site.data.projecten %} {% for item in items reversed %} {%
+    include cv-item-structure.html%} {% endfor %}
   </div>
 </section>
 
 <section id="opleidingen" class="list">
   <h2>Opleidingen</h2>
   <div class="items">
-    {% assign items = site.data.opleidingen | sort: 'start' %} {% for item in
-    items reversed %} {% include cv-item-structure.html%} {% endfor %}
+    {% assign items = site.data.opleidingen %} {% for item in items reversed %}
+    {% include cv-item-structure.html%} {% endfor %}
   </div>
 </section>
 
-<section id="cursussen" class="list">
+<!-- <section id="cursussen" class="list">
   <h2>Cursussen</h2>
   <div class="items">
-    {% assign items = site.data.cursussen | sort: 'start' %} {% for item in
-    items reversed %} {% include cv-item-structure.html%} {% endfor %}
+    {% assign items = site.data.cursussen %} {% for item in items reversed %} {%
+    include cv-item-structure.html%} {% endfor %}
   </div>
-</section>
+</section> -->
