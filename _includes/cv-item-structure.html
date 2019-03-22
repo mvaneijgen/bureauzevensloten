@@ -1,6 +1,8 @@
 <div class="item">
   <h3>
-    {{ item.institute }} <span>{{ site.divider }} {{ item.location }}</span>
+    {{ item.institute }} {% if item.location %}<span
+      >{{ site.divider }} {{ item.location }}</span
+    >{% endif %}
   </h3>
   <p>{{ item.title }}</p>
   <p class="year">
