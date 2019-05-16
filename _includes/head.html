@@ -68,12 +68,12 @@
   <meta content="{{ site.title }}" property="og:site_name" />
   {% if page.description %}
   <meta
-    content="{{ page.description | remove: '<p>' | remove: '</p>' | escape }}"
+    content="{{ page.description | remove: '<p>' | remove: '</p>' | strip_html | escape }}"
     property="og:description"
   />
   {% else %}
   <meta
-    content="{{ site.description | remove: '<p>' | remove: '</p>' | escape }}"
+    content="{{ site.description | remove: '<p>' | remove: '</p>' | strip_html | escape }}"
     property="og:description"
   />
   {% endif %}
